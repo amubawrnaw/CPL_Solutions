@@ -31,6 +31,7 @@ int main(){
 			al[a].push_back(b);
 			degree[b]++;
 		}
+		
 		priority_queue<int, vi, greater<int> > q;
 		bitset<100> visited;
 

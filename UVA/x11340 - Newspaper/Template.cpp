@@ -23,18 +23,6 @@ int main() {
 	int nCtr;
 	scanf("%d",&nCtr);
 	for(int i = 0; i < nCtr; i++) {
-
+		
 	}
-
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
-	}
-
-	fclose(pFile);
-	return 0;
 }

@@ -23,19 +23,24 @@ int main() {
 
 	int nCtr;
 	scanf("%d",&nCtr);
+	string in;
+	stack<string> dream; 
 	for(int i = 0; i < nCtr; i++) {
+		cin >> in;
+		if(in.compare("Sleep")==0){
+			cin >> in;
+			dream.push(in);
+		}else if(in.compare("Test")==0){
+			if(dream.empty()){
+				cout << "Not in a dream\n";
+			}else{
+				cout << dream.top() << "\n";
+			}
 
+		}else{
+			if(!dream.empty())
+				dream.pop();
+		}
 	}
-
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
-	}
-
-	fclose(pFile);
 	return 0;
 }

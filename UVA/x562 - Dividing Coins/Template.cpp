@@ -6,7 +6,10 @@
 #include <utility>
 #include <vector>
 #include <algorithm>
-
+#include <queue>
+#include <bitset>
+#include <map>
+#include <stack>
 using namespace std;
 
 typedef pair<int,int> ii;
@@ -18,17 +21,25 @@ typedef pair<int,ii> iii;
 int main() {
 	FILE *pFile = fopen("out.txt","w");
 
-	int nCtr;
+	int nCtr, as;
 	scanf("%d",&nCtr);
 	for(int i = 0; i < nCtr; i++) {
-		int tc;
-		scanf("%d", &tc);
-		for(int i = 0 ; i < tc ; i++){
-			
+		scanf("%d", &as);
+		int arr[as];
+		int max = 0;
+		for(int i = 0 ; i < as ; i++){
+			scanf("%d", &arr[i]);
+			max+= arr[i];
 		}
-
-
+		sort(arr,arr+as);
+		int sum = 0;
+		int i = 0;
+		while(sum<max/2){
+			sum+=arr[i];
+			i++;
+		}
+		if(sum>max) sum-=arr[0];
+		fprintf(pFile,"%d\n", abs(sum-(max/2)));
 	}
-	fclose(pFile);
 	return 0;
 }

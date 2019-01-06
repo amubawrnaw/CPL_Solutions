@@ -6,7 +6,10 @@
 #include <utility>
 #include <vector>
 #include <algorithm>
-
+#include <queue>
+#include <bitset>
+#include <map>
+#include <stack>
 using namespace std;
 
 typedef pair<int,int> ii;
@@ -21,14 +24,18 @@ int main() {
 	int nCtr;
 	scanf("%d",&nCtr);
 	for(int i = 0; i < nCtr; i++) {
-		int tc;
-		scanf("%d", &tc);
-		for(int i = 0 ; i < tc ; i++){
-			
-		}
-
 
 	}
+
+	int n;
+	while(scanf("%d",&n) == 1) {
+
+	}
+
+	while(scanf("%d",&n),n) {
+
+	}
+
 	fclose(pFile);
 	return 0;
 }

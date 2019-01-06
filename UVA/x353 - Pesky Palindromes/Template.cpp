@@ -6,7 +6,10 @@
 #include <utility>
 #include <vector>
 #include <algorithm>
-
+#include <queue>
+#include <bitset>
+#include <map>
+#include <stack>
 using namespace std;
 
 typedef pair<int,int> ii;
@@ -16,19 +19,11 @@ typedef long long ll;
 typedef pair<int,ii> iii;
 
 int main() {
-	FILE *pFile = fopen("out.txt","w");
+	freopen("out.txt","w",stdout);
 
-	int nCtr;
-	scanf("%d",&nCtr);
-	for(int i = 0; i < nCtr; i++) {
-		int tc;
-		scanf("%d", &tc);
-		for(int i = 0 ; i < tc ; i++){
-			
-		}
-
-
+	string n;
+	while(getline(cin, n)) {
+		cout << "The string '" << n << "' contains " << n.length() << " palindromes.\n";
 	}
-	fclose(pFile);
 	return 0;
 }

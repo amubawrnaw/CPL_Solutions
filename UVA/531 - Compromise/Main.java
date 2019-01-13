@@ -78,12 +78,6 @@ public class Main {
                 ans+= s.pop() + " ";
             }
             String an2 = "";
-//            for( i = 1 ; i < al1.size()+1; i++){
-//                for( k = 1 ; k < al2.size() + 1 ;k++){
-//                    an2+=dir[i][k]+",";
-//                }
-//                an2+="\n";
-//            }
             System.out.println(ans.trim());
         }
     }

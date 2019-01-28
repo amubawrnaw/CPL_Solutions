@@ -7,22 +7,24 @@ typedef vector<ii> vii;
 typedef long long ll;
 typedef pair<int,ii> iii;
 
+
 int main() {
 	//freopen("out.txt","wt",stdout);
 	string line;
+	int verts, v;
+	while(scanf("%d",&verts),verts) {
+		vi arr[verts];
+		while(scanf("%d", &v),v)
+			while(scanf("%d", &t),t) 
+				arr[v].push_back(t);
+		scanf("%d", &t);
+		while(t--){
+			scanf("%d", &v);
+			q.push(v);
 
-	int nCtr;
-	scanf("%d",&nCtr);
-	for(int i = 0; i < nCtr; i++) {
 
-	}
+		}
 
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
 
 	}
 	return 0;

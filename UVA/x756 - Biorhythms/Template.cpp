@@ -8,22 +8,13 @@ typedef long long ll;
 typedef pair<int,ii> iii;
 
 int main() {
-	//freopen("out.txt","wt",stdout);
+	FILE *pFile = fopen("out.txt","w");
 	string line;
 
-	int nCtr;
-	scanf("%d",&nCtr);
-	for(int i = 0; i < nCtr; i++) {
-
-	}
-
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
+	int w,x,y,z;
+	scanf("%d %d %d %d",&w,&x,&y,&z);
+	while(w!=-1 && x!=-1 && y!=-1 && z!=-1){
+		
 	}
 	return 0;
 }

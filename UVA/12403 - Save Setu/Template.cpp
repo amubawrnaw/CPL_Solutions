@@ -11,19 +11,18 @@ int main() {
 	//freopen("out.txt","wt",stdout);
 	string line;
 
-	int nCtr;
+	int nCtr, temp, trash;
 	scanf("%d",&nCtr);
+	ll sum=0;
 	for(int i = 0; i < nCtr; i++) {
-
-	}
-
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
+		
+		cin >> line;
+		if(line.compare("donate") == 0){
+			scanf("%d%c", &temp, &trash);
+			sum+=temp;
+		}else{
+			printf("%lld\n", sum);
+		}
 	}
 	return 0;
 }

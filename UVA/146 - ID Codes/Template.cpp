@@ -10,20 +10,13 @@ typedef pair<int,ii> iii;
 int main() {
 	//freopen("out.txt","wt",stdout);
 	string line;
+	cin >> line;
+	while(line.compare("#")!=0){
+		int temp = next_permutation(line.begin(), line.end());
+		if(temp == 0) printf("No Successor\n");
+		else cout << line << "\n";
 
-	int nCtr;
-	scanf("%d",&nCtr);
-	for(int i = 0; i < nCtr; i++) {
-
-	}
-
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
+		cin >> line;
 	}
 	return 0;
 }

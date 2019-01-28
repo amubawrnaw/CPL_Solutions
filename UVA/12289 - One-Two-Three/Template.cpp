@@ -14,16 +14,17 @@ int main() {
 	int nCtr;
 	scanf("%d",&nCtr);
 	for(int i = 0; i < nCtr; i++) {
-
+		cin >> line;
+		if(line.length() == 5) printf("3\n");
+		else{
+			int t = 0;
+			if(line[0] == 'o')t++;
+			if(line[1] == 'n')t++;
+			if(line[2] == 'e')t++;
+			if(t>=2)printf("1\n");
+			else printf("2\n");
+		}
 	}
 
-	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
-	while(scanf("%d",&n),n) {
-
-	}
 	return 0;
 }

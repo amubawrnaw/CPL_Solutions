@@ -11,19 +11,22 @@ int main() {
 	//freopen("out.txt","wt",stdout);
 	string line;
 
-	int nCtr;
-	scanf("%d",&nCtr);
-	for(int i = 0; i < nCtr; i++) {
-
-	}
-
 	int n;
-	while(scanf("%d",&n) == 1) {
-
-	}
-
 	while(scanf("%d",&n),n) {
-
+		int arr[n];
+		double sum = 0;
+		for(int i = 0 ; i < n ; i++){
+			scanf("%d", &arr[i]);
+		}
+		double mult;
+		do{
+			mult = 1.0;
+			for(int k = n-1 ; k >=0 ; k--){
+				sum+=arr[k]*mult;
+				mult*=10;
+			}
+		}while(next_permutation(arr, arr + n));
+		printf("%ld\n", sum);
 	}
 	return 0;
 }

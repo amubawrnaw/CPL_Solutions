@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class M3{
+public class Main{
 	public static void main(String[] args){
 		Scanner sc = new Scanner(System.in);
 

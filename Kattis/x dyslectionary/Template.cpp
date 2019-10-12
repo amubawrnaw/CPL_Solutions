@@ -7,18 +7,18 @@ typedef vector<ii> vii;
 typedef long long ll;
 typedef pair<int,ii> iii;
 
-bool cmp(const string s1, const string s2){
+bool cmp(string s1, string s2){
 	char c1 = s1[s1.length()-1];
 	char c2 = s2[s2.length()-1];
 	if(c1 == c2){
-		return s1.length() > s2.length();
+		return s1.length() < s2.length();
 	}else{
 		return c1<c2;
 	}
 }
 
 int main() {
-	freopen("out.txt","wt",stdout);
+	//freopen("out.txt","wt",stdout);
 	string s;
 	vector<string> vec;
 	int maxlen;
@@ -31,9 +31,11 @@ int main() {
 		maxlen = s.length();
 		
 		while(getline(cin,s)){
-			if(s.length() > maxlen) maxlen = s.length();
-			if(!s.empty())
+			
+			if(!s.empty()){
+				if(s.length() > maxlen) maxlen = s.length();
 				vec.push_back(s);
+			}
 			else
 				break;
 		}

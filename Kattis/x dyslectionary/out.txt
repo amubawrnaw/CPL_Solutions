@@ -4,11 +4,7 @@ banana
   kiwi
   pear
 
-airplane
  bicycle
+airplane
      car
     boat
-
-nigga
-  boi
- gurl

@@ -1,0 +1,46 @@
+1
+PROJECT[pname]
+SELECT[company = "SoftDev"]
+	(works)
+2
+PROJECT[pname, city]
+SELECT[company = "SoftDev"]
+	EQUIJOIN[works.pname = lives.pname]
+		(lives, works)
+3
+PROJECT[pname]
+SELECT[company != "SoftDev"]
+	(works)
+4
+PROJECT[name]
+SELECT[(pizza = 'mushroom' or pizza = 'pepperoni') and gender = 'F']
+	EQUIJOIN[eats.name = person.name]
+		(person, eats)
+5
+PROJECT[name]
+SELECT[pizza = 'mushroom' and pizza = 'pepperoni' and gender = 'F']
+	EQUIJOIN[eats.name = person.name]
+		(person, eats)
+6
+PROJECT[pizzeria]
+INTERSECTION 
+	PROJECT[pizzeria, pizza]
+		SELECT[price < 10](serves),
+	PROJECT[pizzeria, pizza]
+		EQUIJOIN[frequents.name = eats.name]
+			(SELECT[name = 'Amy'](frequents), SELECT[name = 'Amy'](eats))
+
+
+9
+A B C D
+1 2 4 6
+3 4 6 8
+
+10
+A B B C D
+2 a a 7 8
+3 c c 5 9
+5 b b 6 6
+
+SELECT pizzeria, min(price)
+FROM 

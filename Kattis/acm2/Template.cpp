@@ -15,15 +15,32 @@ int main() {
 		arr.push_back(e);
 	}
 	int ans = arr[ind];
+	int timeleft = 300 - ans;
 	arr.erase(arr.begin() + ind);
+	sort(arr.begin(), arr.end());
 	bool solved = false;
 	int sc = 1;
-	while(ans<300){
+	while(timeleft>0&&arr.size()!=0){
 		solved = true;
+		if(timeleft-arr[0]>=0){
+			sc++;
+			ans += (300-timeleft)+arr[0];
+			timeleft-=arr[0];
+			arr.erase(arr.begin());
+		}else{
+			break;
+		}
 	}
-	if(!solved&&ans!=300){
+	/*
+
+	3 1
+	299 1 1
+	1 299
+	ans = 299
+	*/
+	if(!solved&&timeleft<0){
 		printf("0 0");
 	}else{
-
+		printf("%d %d", sc, ans);
 	}
 }
